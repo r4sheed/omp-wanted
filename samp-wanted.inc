@@ -64,10 +64,14 @@ stock Wanted_SetPlayerWantedLevel(playerid, level)
     {
         if(INC_gsWantedLevel[playerid] != level)
         {
-            if((level < INC_gsWantedLevel[playerid]) || (level > INC_gsWantedLevel[playerid]))
-			{
-                CallRemoteFunction("OnPlayerWantedLevelChange", "iii", playerid, level, INC_gsWantedLevel[playerid]);
-			}
+            // if(level < INC_gsWantedLevel[playerid])
+			// {  
+			// }
+			// else if(level > INC_gsWantedLevel[playerid])
+			// {
+			// }
+
+			CallRemoteFunction("OnPlayerWantedLevelChange", "iii", playerid, level, INC_gsWantedLevel[playerid]);
 
             INC_gsWantedLevel[playerid] = level;
         }
