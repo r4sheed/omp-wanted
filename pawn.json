@@ -1,11 +1,11 @@
 {
 	"user": "r4sheed",
-	"repo": "samp-wanted",
+	"repo": "omp-wanted",
 	"tag": "0.0.1",
 	"entry": "test.pwn",
 	"output": "gamemodes/test.amx",
 	"dependencies": [
-		"pawn-lang/samp-stdlib"
+		"openmultiplayer/omp-stdlib"
 	],
 	"runtime": {
 		"mode": "y_testing"

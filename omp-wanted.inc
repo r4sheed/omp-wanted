@@ -1,16 +1,16 @@
 // built-in include guard removal
 // just in case the user has a local dependency with the same file name
-#if defined _inc_samp_wanted
-    #undef _inc_samp_wanted
+#if defined _inc_omp_wanted
+    #undef _inc_omp_wanted
 #endif
 
 // custom include-guard to ensure we don't duplicate
-#if defined _samp_wanted_included
+#if defined _omp_wanted_included
 	#endinput
 #endif
-#define _samp_wanted_included
+#define _omp_wanted_included
 
-#include <a_samp>
+#include <open.mp>
 
 //   .oooooo..o                          ooooo         o8o   .o8                                    o8o                     
 //  d8P'    `Y8                          `888'         `"'  "888                                    `"'                     
@@ -23,14 +23,8 @@
 //                                                                                                                          
 //    
 
-// Sometimes a hooked function name becomes too long and gives a warning.
-// In that case you can replace some of the words with shorter version.
-#if defined DEFINE_HOOK_REPLACEMENT
-	DEFINE_HOOK_REPLACEMENT__(Level, Lvl);
-#endif
-
 /**
- * <library>samp-wanted</library>
+ * <library>omp-wanted</library>
  * <summary>This callback is called when a player wanted level changes.</summary>
  * <param name="playerid">The ID of the player that attained wanted level</param>
  * <param name="newlevel">The amount of wanted stars the player currently have</param>
@@ -40,7 +34,7 @@
 forward OnPlayerWantedLevelChange(playerid, newlevel, oldlevel);
 
 /**
- * <library>samp_wanted</library>
+ * <library>omp_wanted</library>
  * <summary>Maximum number of wanted stars that a player can have</summary>
  */
 #if !defined MAX_WANTED_LEVEL
@@ -88,7 +82,7 @@ stock Wanted_SetPlayerWantedLevel(playerid, level)
 #define SetPlayerWantedLevel Wanted_SetPlayerWantedLevel
 
 /**
- * <library>samp-wanted</library>
+ * <library>omp-wanted</library>
  * <summary>Gives wanted stars for a player.</summary>
  * <param name="playerid">The ID of the player to set wanted level to</param>
  * <param name="level">The amount of wanted stars to give.</param>
